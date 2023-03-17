@@ -1,0 +1,33 @@
+package rendimento;
+
+public class Investimento {
+
+	Double investimentoInicial;
+	Double taxa = 0.2;
+	int meses;
+	
+	public Investimento() {
+		
+	}
+	
+	public Investimento(Double investimentoInicial, Double taxa, int meses) {
+		super();
+		this.investimentoInicial = investimentoInicial;
+		this.taxa = taxa;
+		this.meses = meses;
+	}
+	
+	public void calcularMostrar() {
+		Double aux = 0.0;
+		
+		for(int i = 0 ; i < meses ; i++) {
+			aux = investimentoInicial+ (investimentoInicial*taxa);
+			System.out.printf("Mês %d: %.2f", i+1, aux);
+		}
+		
+		
+	}
+	
+	
+	
+}

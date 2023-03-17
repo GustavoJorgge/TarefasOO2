@@ -1,0 +1,38 @@
+package rendimento;
+import java.text.NumberFormat;
+
+public class Investimento {
+
+	Double investimentoInicial;
+	Double taxa;
+	int meses;
+	
+	public Investimento() {
+		
+	}
+	
+	public Investimento(Double investimentoInicial, Double taxa, int meses) {
+		super();
+		this.investimentoInicial = investimentoInicial;
+		this.taxa = taxa;
+		this.meses = meses;
+	}
+	
+	public void calcularInvestimento() {
+		Double aux = investimentoInicial;
+		
+		System.out.printf("Investimento inicial: %s", NumberFormat.getCurrencyInstance().format(this.investimentoInicial));
+		System.out.printf("Taxa de juros: %s", NumberFormat.getPercentInstance().format(this.taxa));
+		System.out.printf("-----------Resultado-----------");
+		
+		for(int i = 0 ; i < meses ; i++) {
+			aux = aux * taxa/100 + aux;
+			System.out.printf("Mês %d: %.2f\n", i+1, NumberFormat.getCurrencyInstance().format(aux));
+		}
+		
+		
+	}
+	
+	
+	
+}

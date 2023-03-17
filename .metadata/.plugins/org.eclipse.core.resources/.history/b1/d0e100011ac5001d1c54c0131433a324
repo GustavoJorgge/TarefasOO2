@@ -1,0 +1,12 @@
+package AulaStrings;
+
+import java.util.Scanner;
+
+public class ExemploString {
+	public static void main(String[]args) {
+		Scanner ler = new Scanner(System.in);
+		System.out.printf("Entre com seu nomer");
+		String nome = ler.nextLine();
+		System.out.printf("seu nome digitado:");
+	}
+}
